@@ -4,7 +4,9 @@ Premium homepage preview for the Ner Yaalé association, helping French-speaking
 
 ## Preview
 
-Live demo: [Deploy on Vercel](#)
+Live demo: [https://ner-yaale-preview.vercel.app](https://ner-yaale-preview.vercel.app)
+
+Repository: [https://github.com/Leaab/ner-yaale-preview](https://github.com/Leaab/ner-yaale-preview)
 
 ## Tech Stack
 

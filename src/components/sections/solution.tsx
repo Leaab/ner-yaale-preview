@@ -11,6 +11,9 @@ const steps = [
     title: "On écoute votre histoire",
     description:
       "Votre projet d'Alya, vos enfants, vos attentes, vos inquiétudes.",
+    color: "border-teal/30 bg-teal/10",
+    badge: "bg-teal text-white",
+    iconColor: "text-teal",
   },
   {
     number: "02",
@@ -18,6 +21,9 @@ const steps = [
     title: "On clarifie les options",
     description:
       "Types d'écoles, niveau religieux, intégration, langue, rythme, environnement.",
+    color: "border-coral/30 bg-coral/10",
+    badge: "bg-coral text-white",
+    iconColor: "text-coral",
   },
   {
     number: "03",
@@ -25,6 +31,9 @@ const steps = [
     title: "On vous aide à avancer",
     description:
       "Vous repartez avec une vision plus claire et des pistes concrètes.",
+    color: "border-gold/40 bg-gold/15",
+    badge: "bg-gold text-navy",
+    iconColor: "text-navy",
   },
 ];
 
@@ -37,10 +46,10 @@ export function SolutionSection() {
       <div className="relative">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <FadeIn>
-            <p className="text-sm font-medium tracking-widest uppercase text-gold mb-4">
+            <p className="text-sm font-semibold tracking-wide uppercase text-teal mb-4">
               Notre accompagnement
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-navy leading-tight mb-6">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-navy leading-tight mb-6 tracking-tight">
               Ner Yaalé aide les parents à poser les bonnes questions avant de
               choisir.
             </h2>
@@ -64,7 +73,7 @@ export function SolutionSection() {
                 y1="4"
                 x2="100%"
                 y2="4"
-                stroke="#EADDCB"
+                stroke="#3D8B9E"
                 strokeWidth="2"
                 strokeDasharray="8 6"
               />
@@ -78,14 +87,14 @@ export function SolutionSection() {
                 <FadeIn key={step.number} delay={0.2 * index}>
                   <div className="relative text-center">
                     {/* Step number circle */}
-                    <div className="relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-white shadow-md shadow-navy/8 border border-sand mb-8 mx-auto">
-                      <Icon size={28} className="text-navy/60" />
-                      <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gold text-navy text-xs font-bold flex items-center justify-center">
+                    <div className={`relative inline-flex items-center justify-center w-20 h-20 rounded-full shadow-md border-2 ${step.color} mb-8 mx-auto`}>
+                      <Icon size={28} className={step.iconColor} />
+                      <span className={`absolute -top-2 -right-2 w-7 h-7 rounded-full text-xs font-bold flex items-center justify-center ${step.badge}`}>
                         {step.number}
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-xl font-semibold text-navy mb-3">
+                    <h3 className="font-display text-xl font-bold text-navy mb-3">
                       {step.title}
                     </h3>
                     <p className="text-navy/60 leading-relaxed max-w-xs mx-auto">

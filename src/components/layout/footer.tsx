@@ -20,7 +20,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="font-serif text-2xl font-semibold text-white mb-2">
+            <h3 className="font-display text-2xl font-semibold text-white mb-2">
               Ner Yaalé
             </h3>
             <p className="text-sky/80 text-sm mb-1">Mon école en Israël</p>

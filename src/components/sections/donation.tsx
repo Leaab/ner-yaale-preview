@@ -33,14 +33,14 @@ export function DonationSection() {
     <SectionWrapper id="don" className="py-24 lg:py-32">
       <div className="relative rounded-[2rem] overflow-hidden">
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-navy/95" />
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-sky/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-gold/10 blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-teal/80 to-navy" />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-coral/15 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-teal/20 blur-3xl" />
 
         <div className="relative px-6 sm:px-10 lg:px-16 py-16 lg:py-20">
           <div className="max-w-3xl mx-auto text-center mb-14">
             <FadeIn>
-              <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-white leading-tight mb-6">
+              <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white leading-tight mb-6">
                 Aider une famille à choisir la bonne école, c&apos;est aider un
                 enfant à réussir son Alya.
               </h2>
@@ -70,7 +70,7 @@ export function DonationSection() {
                     <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-5">
                       <Icon size={20} className="text-gold" />
                     </div>
-                    <p className="text-2xl font-serif font-semibold text-gold mb-2">
+                    <p className="text-2xl font-display font-semibold text-gold mb-2">
                       {tier.amount}
                     </p>
                     <h3 className="font-medium text-white mb-2">{tier.title}</h3>

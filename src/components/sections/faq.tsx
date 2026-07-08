@@ -42,7 +42,7 @@ export function FAQSection() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-14">
           <FadeIn>
-            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-navy leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy leading-tight">
               Les questions que les parents se posent souvent
             </h2>
           </FadeIn>

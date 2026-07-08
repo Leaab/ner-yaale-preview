@@ -8,17 +8,20 @@
   --color-gold: #d8a84f;
   --color-sage: #a7b89a;
   --color-white: #ffffff;
+  --color-teal: #3d8b9e;
+  --color-coral: #e8856c;
+  --color-rose: #d4568c;
+  --color-mint: #b8d4c8;
+  --color-lime: #c5d86d;
 
-  --font-serif: var(--font-playfair);
-  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-sora);
+  --font-sans: var(--font-plus-jakarta);
 }
 
-/* Paper texture overlay */
 .paper-texture {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -31,19 +34,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Selection */
 ::selection {
-  background-color: color-mix(in srgb, var(--color-gold) 30%, transparent);
+  background-color: color-mix(in srgb, var(--color-teal) 25%, transparent);
   color: var(--color-navy);
 }
 
-/* Focus visible */
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-teal);
   outline-offset: 2px;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -58,10 +58,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-sage);
+  background: var(--color-teal);
 }
 
-/* Accordion animations */
 @keyframes accordion-down {
   from {
     height: 0;

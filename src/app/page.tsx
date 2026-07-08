@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/sections/hero";
 import { ProblemSection } from "@/components/sections/problem";
 import { SolutionSection } from "@/components/sections/solution";
 import { EmotionalSection } from "@/components/sections/emotional";
+import { PhotoGallerySection } from "@/components/sections/photo-gallery";
 import { ServicesSection } from "@/components/sections/services";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { DonationSection } from "@/components/sections/donation";
@@ -23,6 +24,7 @@ export default function Home() {
         <ProblemSection />
         <SolutionSection />
         <EmotionalSection />
+        <PhotoGallerySection />
         <ServicesSection />
         <TestimonialsSection />
         <DonationSection />

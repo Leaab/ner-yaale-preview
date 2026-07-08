@@ -47,7 +47,7 @@ export function Navbar() {
             className="rounded-full transition-transform duration-300 group-hover:scale-105"
             priority
           />
-          <span className="hidden sm:block font-serif text-lg font-semibold text-navy">
+          <span className="hidden sm:block font-display text-lg font-semibold text-navy">
             Ner Yaalé
           </span>
         </a>
@@ -58,7 +58,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-navy/70 hover:text-navy transition-colors"
+              className="text-sm font-semibold text-navy/70 hover:text-teal transition-colors"
             >
               {link.label}
             </a>

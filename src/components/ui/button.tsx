@@ -20,9 +20,9 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-navy text-white hover:bg-navy/90 shadow-lg shadow-navy/15 hover:shadow-xl hover:shadow-navy/20 hover:-translate-y-0.5",
+      "bg-gradient-to-r from-teal to-navy text-white hover:from-teal/90 hover:to-navy/90 shadow-lg shadow-teal/20 hover:shadow-xl hover:-translate-y-0.5",
     secondary:
-      "bg-gold text-navy hover:bg-gold/90 shadow-md shadow-gold/20 hover:shadow-lg hover:-translate-y-0.5",
+      "bg-gradient-to-r from-gold to-coral/80 text-navy hover:opacity-90 shadow-md shadow-gold/25 hover:shadow-lg hover:-translate-y-0.5",
     outline:
       "border-2 border-navy/20 text-navy hover:border-navy/40 hover:bg-navy/5",
     ghost: "text-navy hover:bg-navy/5",
