@@ -31,7 +31,7 @@ export function FinalCTASection() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <Button href="#contact" size="lg">
                 Poser une question
                 <ArrowRight size={18} />

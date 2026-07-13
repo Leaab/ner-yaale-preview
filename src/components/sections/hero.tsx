@@ -134,7 +134,7 @@ export function HeroSection() {
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-wrap items-start gap-3 sm:gap-4 mb-8">
                 <Button href="#contact" size="lg">
                   Poser une question
                 </Button>
