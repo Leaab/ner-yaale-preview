@@ -1,29 +1,23 @@
-/** Curated Unsplash images — education, family, Israel */
+/** Local images — stored in /public/images for reliable loading */
 export const images = {
   hero: {
-    main: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=80&auto=format&fit=crop",
-    secondary:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80&auto=format&fit=crop",
-    accent:
-      "https://images.unsplash.com/photo-1503676260728-1c00da280a25?w=500&q=80&auto=format&fit=crop",
-    topRight:
-      "https://images.unsplash.com/photo-1427504494785-3a16a7551689?w=500&q=80&auto=format&fit=crop",
-    bottomRight:
-      "https://images.unsplash.com/photo-1511632765481-a08665b4261b?w=500&q=80&auto=format&fit=crop",
+    main: "/images/hero-main.jpg",
+    secondary: "/images/hero-secondary.jpg",
+    accent: "/images/hero-accent.jpg",
+    topRight: "/images/hero-top-right.jpg",
+    bottomRight: "/images/hero-bottom-right.jpg",
   },
-  emotional:
-    "https://images.unsplash.com/photo-1544717297-5449628746eb?w=900&q=80&auto=format&fit=crop",
-  problem:
-    "https://images.unsplash.com/photo-1560784899-3c2771e3f2b1?w=800&q=80&auto=format&fit=crop",
+  emotional: "/images/emotional.jpg",
+  problem: "/images/problem.jpg",
   gallery: [
-    "https://images.unsplash.com/photo-1427504494785-3a16a7551689?w=600&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1503676260728-1c00da280a25?w=600&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1511632765481-a08665b4261b?w=600&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80&auto=format&fit=crop",
+    "/images/gallery-1.jpg",
+    "/images/gallery-2.jpg",
+    "/images/gallery-3.jpg",
+    "/images/gallery-4.jpg",
   ],
   testimonials: [
-    "https://images.unsplash.com/photo-1476703993597-955a393f0d20?w=200&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1531983412531-592002632556?w=200&q=80&auto=format&fit=crop",
+    "/images/testimonial-1.jpg",
+    "/images/testimonial-2.jpg",
+    "/images/testimonial-3.jpg",
   ],
 } as const;
