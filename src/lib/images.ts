@@ -5,7 +5,11 @@ export const images = {
     secondary:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80&auto=format&fit=crop",
     accent:
-      "https://images.unsplash.com/photo-1497633766223-10f4fd788379?w=500&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1503676260728-1c00da280a25?w=500&q=80&auto=format&fit=crop",
+    topRight:
+      "https://images.unsplash.com/photo-1427504494785-3a16a7551689?w=500&q=80&auto=format&fit=crop",
+    bottomRight:
+      "https://images.unsplash.com/photo-1511632765481-a08665b4261b?w=500&q=80&auto=format&fit=crop",
   },
   emotional:
     "https://images.unsplash.com/photo-1544717297-5449628746eb?w=900&q=80&auto=format&fit=crop",

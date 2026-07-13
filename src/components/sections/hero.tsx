@@ -18,7 +18,7 @@ const floatingCards = [
     icon: GraduationCap,
     label: "Choix d'école",
     delay: 0,
-    position: "top-4 -left-2 lg:-left-6",
+    position: "top-[18%] left-[2%] lg:left-[0%]",
     color: "bg-sky/40 border-sky/30",
     iconBg: "bg-teal/20 text-teal",
   },
@@ -26,7 +26,7 @@ const floatingCards = [
     icon: Users,
     label: "Intégration",
     delay: 0.2,
-    position: "top-24 -right-2 lg:right-0",
+    position: "top-[8%] right-[28%]",
     color: "bg-coral/25 border-coral/30",
     iconBg: "bg-coral/30 text-coral",
   },
@@ -34,7 +34,7 @@ const floatingCards = [
     icon: Languages,
     label: "Hébreu",
     delay: 0.4,
-    position: "bottom-28 -left-4 lg:-left-8",
+    position: "bottom-[38%] left-[0%]",
     color: "bg-gold/30 border-gold/40",
     iconBg: "bg-gold/30 text-navy",
   },
@@ -42,7 +42,7 @@ const floatingCards = [
     icon: Home,
     label: "Projet familial",
     delay: 0.6,
-    position: "bottom-16 -right-4 lg:right-2",
+    position: "top-[6%] right-[2%]",
     color: "bg-sage/35 border-sage/40",
     iconBg: "bg-sage/40 text-navy",
   },
@@ -50,11 +50,37 @@ const floatingCards = [
     icon: HeartHandshake,
     label: "Accompagnement",
     delay: 0.8,
-    position: "top-1/2 -translate-y-1/2 -right-8 lg:-right-12",
+    position: "bottom-[12%] right-[4%]",
     color: "bg-rose/15 border-rose/25",
     iconBg: "bg-rose/20 text-rose",
   },
 ];
+
+function PhotoTile({
+  src,
+  alt,
+  className,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  priority?: boolean;
+}) {
+  return (
+    <div
+      className={`relative overflow-hidden rounded-2xl shadow-lg border-[3px] border-white ${className ?? ""}`}
+    >
+      <SectionImage
+        src={src}
+        alt={alt}
+        fill
+        priority={priority}
+        className="hover:scale-105 transition-transform duration-700"
+      />
+    </div>
+  );
+}
 
 export function HeroSection() {
   return (
@@ -64,7 +90,6 @@ export function HeroSection() {
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-teal/15 blur-3xl" />
         <div className="absolute top-1/3 -left-48 w-[400px] h-[400px] rounded-full bg-coral/10 blur-3xl" />
         <div className="absolute bottom-0 right-1/3 w-[350px] h-[350px] rounded-full bg-gold/15 blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-[250px] h-[250px] rounded-full bg-rose/8 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
@@ -129,47 +154,59 @@ export function HeroSection() {
             </FadeIn>
           </div>
 
-          {/* Photo collage + floating cards */}
-          <div className="relative h-[440px] sm:h-[520px] lg:h-[580px]">
+          {/* Bento photo collage — fills the full right column */}
+          <div className="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[580px]">
             <FadeIn delay={0.2} direction="left">
-              <div className="relative mx-auto w-full max-w-md lg:max-w-none h-full">
-                {/* Main photo */}
-                <div className="absolute top-8 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-8 w-[72%] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-navy/15 border-4 border-white rotate-1">
-                  <SectionImage
+              <div className="relative w-full h-full min-h-[inherit]">
+                {/* 5-photo bento grid */}
+                <div className="grid grid-cols-12 grid-rows-6 gap-2.5 sm:gap-3 w-full h-[480px] sm:h-[540px] lg:h-[580px]">
+                  {/* Main — classroom */}
+                  <PhotoTile
                     src={images.hero.main}
                     alt="Enfants dans une salle de classe en Israël"
-                    fill
                     priority
-                    className="hover:scale-105 transition-transform duration-700"
+                    className="col-span-7 row-span-5 col-start-4 row-start-2 rotate-1 shadow-2xl shadow-navy/15 rounded-3xl"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
-                </div>
 
-                {/* Secondary photo */}
-                <div className="absolute bottom-12 left-0 w-[42%] aspect-square rounded-2xl overflow-hidden shadow-xl shadow-teal/20 border-[3px] border-white -rotate-3 z-10">
-                  <SectionImage
+                  {/* Top-left — family discussion */}
+                  <PhotoTile
                     src={images.hero.secondary}
                     alt="Famille en discussion"
-                    fill
-                    className="hover:scale-105 transition-transform duration-700"
+                    className="col-span-5 row-span-3 col-start-1 row-start-1 -rotate-2 shadow-xl shadow-teal/20"
                   />
-                </div>
 
-                {/* Accent photo */}
-                <div className="absolute top-16 right-0 lg:right-4 w-[35%] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border-[3px] border-white rotate-6 z-10 hidden sm:block">
-                  <SectionImage
+                  {/* Top-right — children at school */}
+                  <PhotoTile
+                    src={images.hero.topRight}
+                    alt="Enfants à l'école"
+                    className="col-span-4 row-span-2 col-start-9 row-start-1 rotate-2"
+                  />
+
+                  {/* Middle-right — school supplies */}
+                  <PhotoTile
                     src={images.hero.accent}
-                    alt="Livres et fournitures scolaires"
-                    fill
+                    alt="Fournitures et apprentissage scolaire"
+                    className="col-span-4 row-span-3 col-start-9 row-start-3 -rotate-1"
+                  />
+
+                  {/* Bottom-left — fills gap below family photo */}
+                  <PhotoTile
+                    src={images.hero.bottomRight}
+                    alt="Moment de vie familiale"
+                    className="col-span-5 row-span-3 col-start-1 row-start-4 rotate-1"
                   />
                 </div>
 
-                {/* Color badge */}
-                <div className="absolute top-4 left-4 lg:left-8 z-20 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg border border-gold/30">
+                {/* Gradient overlay on main photo area */}
+                <div className="absolute top-[12%] left-[28%] w-[55%] h-[68%] rounded-3xl pointer-events-none bg-gradient-to-t from-navy/25 via-transparent to-transparent rotate-1" />
+
+                {/* Since 2014 badge */}
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 z-20 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg border border-gold/30">
                   <p className="text-2xl font-display font-bold text-teal">2014</p>
                   <p className="text-xs text-navy/60 font-medium">Depuis</p>
                 </div>
 
+                {/* Floating topic cards — anchored near photos */}
                 {floatingCards.map((card, index) => {
                   const Icon = card.icon;
                   return (
